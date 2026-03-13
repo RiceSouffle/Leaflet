@@ -20,6 +20,10 @@
 
 ---
 
+<p align="center">
+  <img src="image.png" width="800" alt="Leaflet popup — light and dark mode" />
+</p>
+
 ## Why Leaflet?
 
 Ever lose a carefully curated set of tabs? Leaflet captures your entire browser window in one click and lets you restore it exactly as it was — pinned tabs, favicons, and all. It works offline, stores everything locally, and respects your privacy.
@@ -79,6 +83,10 @@ Hover over a saved session to reveal action buttons:
 - **Delete** — click the trash icon, then confirm
 
 ### Settings
+
+<p align="center">
+  <img src="image-1.png" width="500" alt="Leaflet settings page" />
+</p>
 
 Click **Settings** in the popup footer to configure:
 
