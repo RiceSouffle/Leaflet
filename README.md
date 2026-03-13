@@ -58,13 +58,6 @@ Then load in Chrome:
 3. Click **Load unpacked**
 4. Select the `.output/chrome-mv3` folder
 
-### Package for Chrome Web Store
-
-```bash
-npm run zip
-```
-
-This creates a `.zip` in the `.output` directory ready to upload to the [Chrome Web Store Developer Dashboard](https://chrome.google.com/webstore/devconsole).
 
 ## Usage
 
