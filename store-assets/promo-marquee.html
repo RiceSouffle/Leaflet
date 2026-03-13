@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Marquee Promo</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body { margin: 0; padding: 0; }
+  .canvas {
+    width: 1400px; height: 560px;
+    background: linear-gradient(135deg, #4f46e5 0%, #6366f1 40%, #818cf8 100%);
+    display: flex; align-items: center; justify-content: center; gap: 60px; padding: 0 80px;
+    position: relative; overflow: hidden;
+  }
+  .canvas::before {
+    content: '';
+    position: absolute; top: -100px; right: -100px;
+    width: 400px; height: 400px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 50%;
+  }
+  .canvas::after {
+    content: '';
+    position: absolute; bottom: -80px; left: -60px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .left { z-index: 1; }
+  .left h1 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 52px; font-weight: 700; color: white; margin: 0 0 12px 0; display: flex; align-items: center; gap: 20px; }
+  .left p { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 20px; color: rgba(255,255,255,0.85); margin: 0 0 8px 0; line-height: 1.5; max-width: 420px; }
+  .left .badges { display: flex; gap: 12px; margin-top: 20px; }
+  .left .badge { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; color: rgba(255,255,255,0.9); background: rgba(255,255,255,0.15); padding: 5px 12px; border-radius: 20px; backdrop-filter: blur(4px); }
+  .icon { width: 80px; height: 80px; }
+  .mockup {
+    z-index: 1;
+    width: 340px; height: 420px;
+    background: white; border-radius: 12px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+    overflow: hidden; display: flex; flex-direction: column;
+    flex-shrink: 0;
+  }
+  .mock-header { background: white; border-bottom: 1px solid #e5e7eb; padding: 14px 16px; }
+  .mock-header .top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  .mock-header .title { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 14px; font-weight: 600; color: #111827; }
+  .mock-header .count { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 11px; color: #9ca3af; }
+  .mock-btn { width: 100%; padding: 8px; background: #4f46e5; color: white; border: none; border-radius: 8px; font-size: 12px; font-weight: 500; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+  .mock-search { padding: 8px 16px; border-bottom: 1px solid #f3f4f6; }
+  .mock-search input { width: 100%; padding: 6px 8px 6px 28px; font-size: 11px; border: 1px solid #e5e7eb; border-radius: 6px; background: #f9fafb; color: #9ca3af; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; box-sizing: border-box; outline: none; }
+  .mock-list { flex: 1; padding: 10px 16px; overflow: hidden; }
+  .mock-card { border: 1px solid #e5e7eb; border-radius: 8px; padding: 10px; margin-bottom: 8px; }
+  .mock-card h3 { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 12px; font-weight: 500; color: #111827; margin: 0; }
+  .mock-card .meta { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; color: #9ca3af; margin: 2px 0 6px 0; }
+  .mock-card .favs { display: flex; gap: 2px; align-items: center; }
+  .mock-card .favs img { width: 14px; height: 14px; border-radius: 2px; }
+  .mock-card .favs span { font-size: 10px; color: #9ca3af; margin-left: auto; }
+  .mock-footer { border-top: 1px solid #e5e7eb; padding: 8px 16px; display: flex; justify-content: space-between; }
+  .mock-footer span { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; color: #9ca3af; }
+</style>
+</head>
+<body>
+<div class="canvas">
+  <div class="left">
+    <h1><img src="../public/icon/icon.svg" class="icon" /> Leaflet</h1>
+    <p>Save, restore, and manage your browser tab sessions with one click.</p>
+    <div class="badges">
+      <span class="badge">One-click save</span>
+      <span class="badge">Auto-save</span>
+      <span class="badge">Dark mode</span>
+    </div>
+  </div>
+  <div class="mockup">
+    <div class="mock-header">
+      <div class="top">
+        <span class="title">Leaflet</span>
+        <span class="count">4 saved</span>
+      </div>
+      <button class="mock-btn">+ Save Current Session</button>
+    </div>
+    <div class="mock-search">
+      <input type="text" value="Search sessions..." readonly />
+    </div>
+    <div class="mock-list">
+      <div class="mock-card">
+        <h3>Work Research</h3>
+        <div class="meta">2 hours ago</div>
+        <div class="favs">
+          <img src="https://www.google.com/s2/favicons?domain=github.com&sz=16">
+          <img src="https://www.google.com/s2/favicons?domain=stackoverflow.com&sz=16">
+          <img src="https://www.google.com/s2/favicons?domain=docs.google.com&sz=16">
+          <img src="https://www.google.com/s2/favicons?domain=notion.so&sz=16">
+          <span>5 tabs</span>
+        </div>
+      </div>
+      <div class="mock-card">
+        <h3>Shopping List</h3>
+        <div class="meta">yesterday</div>
+        <div class="favs">
+          <img src="https://www.google.com/s2/favicons?domain=amazon.com&sz=16">
+          <img src="https://www.google.com/s2/favicons?domain=ebay.com&sz=16">
+          <img src="https://www.google.com/s2/favicons?domain=etsy.com&sz=16">
+          <span>3 tabs</span>
+        </div>
+      </div>
+      <div class="mock-card">
+        <h3>Auto-save 3/12/2025</h3>
+        <div class="meta">2 days ago</div>
+        <div class="favs">
+          <img src="https://www.google.com/s2/favicons?domain=youtube.com&sz=16">
+          <img src="https://www.google.com/s2/favicons?domain=reddit.com&sz=16">
+          <img src="https://www.google.com/s2/favicons?domain=gmail.com&sz=16">
+          <span>8 tabs</span>
+        </div>
+      </div>
+    </div>
+    <div class="mock-footer">
+      <span>Import | Export</span>
+      <span>Settings</span>
+    </div>
+  </div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+</body>
+</html>
