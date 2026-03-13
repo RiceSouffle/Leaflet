@@ -1,0 +1,7 @@
+@import '@/assets/tailwind.css';
+
+body {
+  margin: 0;
+  background-color: #f9fafb;
+  min-height: 100vh;
+}

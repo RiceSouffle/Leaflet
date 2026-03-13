@@ -1,0 +1,12 @@
+@import '@/assets/tailwind.css';
+
+body {
+  width: 400px;
+  height: 500px;
+  margin: 0;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+}
