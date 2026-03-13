@@ -48,7 +48,7 @@ export function SessionCard({ session, onRestore, onDelete, onRename }: SessionC
   };
 
   return (
-    <div className="relative group bg-white border border-gray-200 rounded-lg p-3 hover:border-indigo-300 hover:shadow-sm transition-all">
+    <div className="relative group bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-3 hover:border-indigo-300 dark:hover:border-indigo-600 hover:shadow-sm transition-all">
       {confirming && (
         <ConfirmDialog
           message={`Delete "${session.name}"?`}
@@ -75,24 +75,24 @@ export function SessionCard({ session, onRestore, onDelete, onRename }: SessionC
                   setEditName(session.name);
                 }
               }}
-              className="text-sm font-medium w-full px-1 py-0.5 border border-indigo-300 rounded focus:outline-none focus:ring-1 focus:ring-indigo-500"
+              className="text-sm font-medium w-full px-1 py-0.5 border border-indigo-300 rounded focus:outline-none focus:ring-1 focus:ring-indigo-500 dark:bg-gray-700 dark:text-gray-100 dark:border-indigo-500"
             />
           ) : (
             <h3
-              className="text-sm font-medium text-gray-900 truncate cursor-pointer hover:text-indigo-600"
+              className="text-sm font-medium text-gray-900 dark:text-gray-100 truncate cursor-pointer hover:text-indigo-600 dark:hover:text-indigo-400"
               onDoubleClick={() => setEditing(true)}
               title="Double-click to rename"
             >
               {session.name}
             </h3>
           )}
-          <p className="text-xs text-gray-400 mt-0.5">{formatRelativeTime(session.createdAt)}</p>
+          <p className="text-xs text-gray-400 dark:text-gray-500 mt-0.5">{formatRelativeTime(session.createdAt)}</p>
         </div>
 
         <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
           <button
             onClick={() => onRestore(session, false)}
-            className="p-1 rounded hover:bg-indigo-50 text-gray-500 hover:text-indigo-600"
+            className="p-1 rounded hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"
             title="Restore in current window"
             aria-label="Restore session"
           >
@@ -102,7 +102,7 @@ export function SessionCard({ session, onRestore, onDelete, onRename }: SessionC
           </button>
           <button
             onClick={() => onRestore(session, true)}
-            className="p-1 rounded hover:bg-indigo-50 text-gray-500 hover:text-indigo-600"
+            className="p-1 rounded hover:bg-indigo-50 dark:hover:bg-indigo-900/30 text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400"
             title="Restore in new window"
             aria-label="Restore in new window"
           >
@@ -112,7 +112,7 @@ export function SessionCard({ session, onRestore, onDelete, onRename }: SessionC
           </button>
           <button
             onClick={() => setConfirming(true)}
-            className="p-1 rounded hover:bg-red-50 text-gray-500 hover:text-red-500"
+            className="p-1 rounded hover:bg-red-50 dark:hover:bg-red-900/30 text-gray-500 dark:text-gray-400 hover:text-red-500"
             title="Delete session"
             aria-label="Delete session"
           >
@@ -125,7 +125,7 @@ export function SessionCard({ session, onRestore, onDelete, onRename }: SessionC
 
       <div className="mt-2 flex items-center justify-between">
         <TabFavicons tabs={session.tabs} />
-        <span className="text-xs text-gray-400 ml-2 whitespace-nowrap">
+        <span className="text-xs text-gray-400 dark:text-gray-500 ml-2 whitespace-nowrap">
           {session.tabs.length} {session.tabs.length === 1 ? 'tab' : 'tabs'}
         </span>
       </div>

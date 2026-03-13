@@ -7,6 +7,7 @@ export const DEFAULT_SETTINGS: UserSettings = {
   suspensionIdleMinutes: 30,
   maxSessionsToKeep: 100,
   openInNewWindow: false,
+  darkMode: false,
 };
 
 export const AUTO_SAVE_ALARM_NAME = 'auto-save-session';

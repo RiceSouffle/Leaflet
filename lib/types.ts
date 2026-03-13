@@ -21,6 +21,7 @@ export interface UserSettings {
   suspensionIdleMinutes: number;
   maxSessionsToKeep: number;
   openInNewWindow: boolean;
+  darkMode: boolean;
 }
 
 export interface AutoSaveMetadata {

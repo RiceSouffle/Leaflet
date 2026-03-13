@@ -1,5 +1,5 @@
 {
-  "name": "tab-session-manager",
+  "name": "leaflet",
   "description": "Save, restore, and manage your browser tab sessions",
   "private": true,
   "version": "0.0.0",

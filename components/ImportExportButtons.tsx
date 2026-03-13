@@ -53,18 +53,18 @@ export function ImportExportButtons({ onExport, onImport }: ImportExportButtonsP
       />
       <button
         onClick={() => fileRef.current?.click()}
-        className="text-xs text-gray-500 hover:text-indigo-600 transition-colors"
+        className="text-xs text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
       >
         Import
       </button>
-      <span className="text-gray-300">|</span>
+      <span className="text-gray-300 dark:text-gray-600">|</span>
       <button
         onClick={onExport}
-        className="text-xs text-gray-500 hover:text-indigo-600 transition-colors"
+        className="text-xs text-gray-500 dark:text-gray-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
       >
         Export
       </button>
-      {status && <span className="text-xs text-indigo-600 ml-1">{status}</span>}
+      {status && <span className="text-xs text-indigo-600 dark:text-indigo-400 ml-1">{status}</span>}
     </div>
   );
 }

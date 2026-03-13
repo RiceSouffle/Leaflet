@@ -1,4 +1,4 @@
-# Tab Session Manager
+# Leaflet
 
 A Chrome extension that lets you save, restore, and manage your browser tab sessions with one click.
 

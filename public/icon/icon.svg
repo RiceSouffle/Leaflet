@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+  <!-- Background circle -->
+  <circle cx="64" cy="64" r="62" fill="#059669"/>
+
+  <!-- Leaf - classic pointed oval shape -->
+  <path d="M64 18 C40 35, 24 55, 24 75 C24 95, 42 108, 64 108 C86 108, 104 95, 104 75 C104 55, 88 35, 64 18Z" fill="#34d399"/>
+
+  <!-- Central vein -->
+  <line x1="64" y1="25" x2="64" y2="100" stroke="#059669" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Side veins -->
+  <path d="M64 42 L46 55" stroke="#059669" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M64 42 L82 55" stroke="#059669" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M64 58 L40 73" stroke="#059669" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M64 58 L88 73" stroke="#059669" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M64 74 L44 88" stroke="#059669" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+  <path d="M64 74 L84 88" stroke="#059669" stroke-width="1.8" fill="none" stroke-linecap="round"/>
+
+  <!-- Pen/quill - angled across the leaf -->
+  <g transform="rotate(-45, 64, 64)">
+    <!-- Pen body -->
+    <rect x="60" y="22" width="8" height="50" rx="1.5" fill="#fefce8"/>
+    <!-- Pen tip -->
+    <polygon points="60,72 68,72 64,84" fill="#374151"/>
+    <!-- Pen cap -->
+    <rect x="60" y="16" width="8" height="8" rx="2" fill="#d4d4d8"/>
+    <!-- Gold band -->
+    <rect x="60" y="62" width="8" height="4" rx="0.5" fill="#fbbf24"/>
+  </g>
+</svg>

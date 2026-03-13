@@ -4,7 +4,7 @@ export default defineConfig({
   modules: ['@wxt-dev/module-react'],
   extensionApi: 'chrome',
   manifest: {
-    name: 'Tab Session Manager',
+    name: 'Leaflet',
     description: 'Save, restore, and manage your browser tab sessions with one click',
     version: '1.0.0',
     permissions: ['tabs', 'storage', 'alarms', 'favicon'],
